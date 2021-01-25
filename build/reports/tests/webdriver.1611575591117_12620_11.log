@@ -1,0 +1,25 @@
+[1611575591.289][INFO]: Starting OperaDriver 87.0.4280.67 (0e5d92df40086cf0050c00f87b11da1b14580930-refs/branch-heads/4280@{#1441}) on port 48426
+[1611575591.289][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping OperaDriver safe.
+[1611575591.664][INFO]: [4b5b514799ae44d32db60c5d33aabfae] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "acceptInsecureCerts": true,
+         "browserName": "operablink",
+         "pageLoadStrategy": "normal"
+      } ]
+   },
+   "desiredCapabilities": {
+      "acceptInsecureCerts": true,
+      "acceptSslCerts": true,
+      "browserName": "operablink",
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "operaOptions": {
+         "args": [  ],
+         "extensions": [  ]
+      },
+      "pageLoadStrategy": "normal",
+      "takesScreenshot": true
+   }
+}
+[1611575591.677][INFO]: [4b5b514799ae44d32db60c5d33aabfae] RESPONSE InitSession ERROR unknown error: cannot find Opera binary

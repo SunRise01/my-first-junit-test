@@ -1,0 +1,728 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"><head><style id="cssProviderStyle" type="text/css">.dialogProviderMessageContainerStyle { color: #A80000; padding-top: 20px; padding-bottom: 20px; text-align: center; }
+                .dialogProviderInternalContainerStyle { padding: 20px; position: absolute; }
+                .dialogProviderIconContainerStyle { display: block; margin-left: auto; margin-right: auto; }
+                .dialogProviderLinkContainerStyle { text-align: center; display: flex; align-items: center; justify-content: center; } 
+                .dialogProviderContainerStyle { background: white; position: relative; }
+                .dialogProviderLinkButtonContainerStyle { margin-top: 16px; text-align: center; display: flex; align-items: center; justify-content: center; } 
+                .dialogProviderLinkButtonStyle { background: none; background-color: transparent; border: none; font-size: 12px; color: #757575; cursor: pointer; padding: 0; text-decoration: underline; } 
+                .reloadButtonStyle, .noIconButtonStyle { display: flex; color: #000000 !important; text-decoration: none; }
+                .reloadButtonStyle:before { display: flex; align-items: center; margin-right: 8px; content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.1328 0.296875C10.9974 0.53125 11.7891 0.898438 12.5078 1.39844C13.2266 1.89323 13.8438 2.48177 14.3594 3.16406C14.8802 3.84115 15.2839 4.59375 15.5703 5.42188C15.8568 6.24479 16 7.10417 16 8C16 8.73438 15.9036 9.44271 15.7109 10.125C15.5234 10.8073 15.2552 11.4453 14.9062 12.0391C14.5625 12.6328 14.1458 13.1745 13.6562 13.6641C13.1719 14.1484 12.6328 14.5651 12.0391 14.9141C11.4453 15.2578 10.8073 15.526 10.125 15.7188C9.44271 15.9062 8.73438 16 8 16C7.26562 16 6.55729 15.9062 5.875 15.7188C5.19271 15.526 4.55469 15.2578 3.96094 14.9141C3.36719 14.5651 2.82552 14.1484 2.33594 13.6641C1.85156 13.1745 1.4349 12.6328 1.08594 12.0391C0.742188 11.4453 0.473958 10.8099 0.28125 10.1328C0.09375 9.45052 0 8.73958 0 8C0 7.27083 0.0963542 6.5625 0.289062 5.875C0.481771 5.1875 0.755208 4.54167 1.10938 3.9375C1.46875 3.32812 1.90365 2.77604 2.41406 2.28125C2.92448 1.78125 3.5 1.35417 4.14062 1H2V0H6V4H5V1.67969C4.39062 1.97135 3.83854 2.33854 3.34375 2.78125C2.85417 3.21875 2.4349 3.71354 2.08594 4.26562C1.73698 4.8125 1.46875 5.40365 1.28125 6.03906C1.09375 6.67448 1 7.32812 1 8C1 8.64062 1.08333 9.26042 1.25 9.85938C1.41667 10.4531 1.65104 11.0104 1.95312 11.5312C2.26042 12.0469 2.6276 12.5182 3.05469 12.9453C3.48177 13.3724 3.95312 13.7396 4.46875 14.0469C4.98958 14.349 5.54688 14.5833 6.14062 14.75C6.73438 14.9167 7.35417 15 8 15C8.64062 15 9.25781 14.9167 9.85156 14.75C10.4505 14.5833 11.0078 14.349 11.5234 14.0469C12.0443 13.7396 12.5182 13.3724 12.9453 12.9453C13.3724 12.5182 13.737 12.0469 14.0391 11.5312C14.3464 11.0104 14.5833 10.4531 14.75 9.85938C14.9167 9.26562 15 8.64583 15 8C15 7.21875 14.8724 6.46615 14.6172 5.74219C14.3672 5.01823 14.0156 4.35938 13.5625 3.76562C13.1094 3.17188 12.5677 2.65885 11.9375 2.22656C11.3125 1.78906 10.6224 1.46615 9.86719 1.25781L10.1328 0.296875Z' fill='%232266E3'/%3E%3C/svg%3E%0A"); } 
+                .onFormSubmittedFeedback { display: flex; align-items: center; justify-content: center; background: white; margin: 0 auto; }
+                .onFormSubmittedFeedbackIcon { display: block; margin-left: auto; margin-right: auto; height: 64px; size: 64px; }
+                .onFormSubmittedFeedback .onFormSubmittedFeedbackMessage { padding: 30px 10px 40px 10px; color: black; font-size: 16px; font-family: Segoe UI; text-align: center; }
+                .onFormSubmittedFeedback .onFormSubmittedFeedbackButton { min-width: 80px; min-height: 32px; font-size: 14px; border-radius: 2px; display: block; margin-left: auto; margin-right: auto; }
+                .onFormSubmittedFeedback .onFormSubmittedFeedbackButtonSuccess { color: white; background-color: #0078D4; border: 1px solid #0078D4; }
+                .onFormSubmittedFeedback .onFormSubmittedFeedbackButtonFail { color: black; background-color: white; border: 1px solid #8A8886; }
+                .onFormSubmittedFeedback .onFormSubmittedFeedbackInternalContainerStyle { padding: 20px; }
+                .formLoader { border: 16px solid #f3f3f3; border-radius: 50%; border-top: 16px solid #0078D4; width: 120px; height: 120px; -webkit-animation: spin 2s linear infinite; /* Safari */ animation: spin 2s linear infinite; margin: 0 auto; }
+                /* Safari */ @-webkit-keyframes spin { 0% { -webkit-transform: rotate(0deg); } 100% { -webkit-transform: rotate(360deg); } }
+                @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+                .mkt-invalid-field, .mkt-required-field { border-color: red; }
+                input.mkt-invalid-field[type="checkbox"], input.mkt-invalid-field[type="radio"], input.mkt-required-field[type="checkbox"], input.mkt-required-field[type="radio"] { outline: 1px solid red; }</style>
+            <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="">
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="">
+        <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="">
+        <link rel="preconnect" href="https://www.google.com" crossorigin="">
+        <link rel="preconnect" href="https://www.gstatic.com" crossorigin="">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+        <link rel="dns-prefetch" href="https://consent.cookiebot.com" crossorigin="">
+        <link rel="dns-prefetch" href="https://static.hotjar.com" crossorigin="">
+        <link rel="dns-prefetch" href="https://connect.facebook.net" crossorigin="">
+        <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" crossorigin="">
+        <link rel="dns-prefetch" href="https://www.youtube.com" crossorigin="">
+        <link rel="dns-prefetch" href="https://snap.licdn.com" crossorigin="">
+        <link rel="dns-prefetch" href="https://content.mql5.com" crossorigin="">
+        
+        
+        
+        
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="text/javascript" charset="UTF-8" async="" src="https://consent.cookiebot.com/2804bac5-2d30-4e66-a429-65c43ca77555/cc.js?renew=false&amp;referer=softjourn.com&amp;dnt=false&amp;forceshow=false&amp;cbid=2804bac5-2d30-4e66-a429-65c43ca77555&amp;whitelabel=false&amp;brandid=Cookiebot&amp;framework="></script><script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/_KUxfxvAoJ4k7SaKyLbja4Mi/recaptcha__ru.js" crossorigin="anonymous" integrity="sha384-N/gUXmMxJw7biuWk93gWs2PrYqQWn+hmNFOqGrInEF8gxWzTIgTRVadQiPTZo/aA" nonce="null"></script><script async="" src="//www.gstatic.com/call-tracking/call-tracking_2.js" nonce="null"></script><script type="text/javascript" async="" src="https://d10lpsik1i8c69.cloudfront.net/w.js"></script><script src="https://connect.facebook.net/signals/config/1629501317375121?v=2.9.33&amp;r=stable" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://www.gstatic.com/wcm/loader.js"></script><script type="text/javascript" async="" src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-NFGS38"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-75277158-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-75277158-1');
+</script>
+<!-- End of Google Analytics -->        <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NFGS38');
+</script>
+    <!-- End preload -->
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
+
+
+<title>Contact Us</title>
+
+<meta itemprop="name" content="Contact Us">
+<meta itemprop="url" content="https://softjourn.com">
+<meta name="format-detection" content="telephone=no">
+<meta name="csrf-token" content="WfET7kkk7LhPMfarMG0Fc1pcZL0BACEwgJaCWwgC">
+
+<link rel="shortcut icon" href="https://softjourn.com/favicon.ico" type="image/png">
+<link rel="image_src" href="media/images/Screenshot_1.jpg">
+
+    <link rel="canonical" href="https://softjourn.com/contact-us">
+
+<meta name="description" content="Fill in the form and we will get back to you within the next 24 hours!">
+<meta name="keywords" content="">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact Us">
+<meta name="twitter:description" content="Softjourn, Inc. is a technology services provider headquartered in Silicon Valley, with R&amp;D centers in Ukraine and Poland.">
+<meta name="twitter:image" content="https://softjourn.com/media/images/Screenshot_1.jpg">
+
+<meta name="twitter:site" content="@Softjourn">
+<meta name="twitter:creator" content="@Softjourn">
+
+<meta property="og:site_name" content="Softjourn Inc">
+<meta property="og:url" content="https://softjourn.com/contact-us">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact Us">
+<meta property="og:description" content="Softjourn, Inc. is a technology services provider headquartered in Silicon Valley, with R&amp;D centers in Ukraine and Poland.">
+<meta property="og:image" content="https://softjourn.com/media/images/Screenshot_1.jpg">
+<meta property="og:image:alt" content="Contact Us">
+
+
+            <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="2804bac5-2d30-4e66-a429-65c43ca77555" type="text/javascript" async="" defer=""></script>
+    
+    <script type="text/javascript">
+        const reCaptchaPublicKey = '6LdEjogUAAAAAKaMsdRKMoRm7eP9Ke7Du11mc3Ug';
+        const recaptchaEvent = document.createEvent('Event');
+        recaptchaEvent.initEvent('recaptcha_ready');
+
+        var onloadRecaptchaCallback = function () {
+            document.dispatchEvent(recaptchaEvent);
+        };
+    </script>
+
+    <!-- Preload -->
+    <link rel="preload" href="/js/vendor.js?id=2ffc328b7d4a865fefda" as="script">
+    <link rel="preload" href="/js/vendor.js?id=2ffc328b7d4a865fefda" as="script">
+    <link rel="preload" href="/js/app.js?id=3ebba658b37a2682efd4" as="script">
+
+
+    
+    <link rel="stylesheet" href="/css/libs/bootstrap.css?id=5264fbd6ca2e76d7161d" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://softjourn.com/fonts/vendor/custom/icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="/css/app.css?id=4c2b0fdd94beca49864e" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" crossorigin="">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700&display=swap"
+              crossorigin>
+        <link rel="stylesheet" href="/css/libs/bootstrap.css?id=5264fbd6ca2e76d7161d">
+        <link rel="stylesheet" href="https://softjourn.com/fonts/vendor/custom/icons.css">
+        <link rel="stylesheet" href="/css/app.css?id=4c2b0fdd94beca49864e">
+    </noscript>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;display=swap" crossorigin="">
+    <link rel="stylesheet" href="/css/libs/bootstrap.css?id=5264fbd6ca2e76d7161d">
+    <link rel="stylesheet" href="https://softjourn.com/fonts/vendor/custom/icons.css">
+    <link rel="stylesheet" href="/css/app.css?id=4c2b0fdd94beca49864e">
+        <link href="/css/pages/contact-us.css?id=fd7417e7a849f5e0ed20" rel="stylesheet">
+    <script src="https://8c37cfc8f03040159c63a1b561fcc3f7.svc.dynamics.com/t/w" type="text/javascript"></script><style></style><style type="text/css" id="CookieConsentStateDisplayStyles">.cookieconsent-optin-preferences,.cookieconsent-optin-statistics,.cookieconsent-optin-marketing,.cookieconsent-optin{display:none;}.cookieconsent-optout-preferences,.cookieconsent-optout-statistics,.cookieconsent-optout-marketing,.cookieconsent-optout{display:block;display:initial;}</style><link rel="stylesheet" type="text/css" media="all" href="https://d10lpsik1i8c69.cloudfront.net/css/reset.css"></head>
+<body class="pageWrapper"><div role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window cc-banner cc-type-info cc-theme-block cc-bottom cc-color-override--1076500478 " style=""><!--googleoff: all--><span id="cookieconsent:desc" class="cc-message">We use cookies to ensure the optimal functioning of the website and facilitate your use of our website. It allows us, among other things, to adjust the appearance of the website to your preferences. Be aware you can disable cookies at anytime.  More information can be found in the <a aria-label="learn more about cookies" role="button" tabindex="0" class="cc-link" href="https://softjourn.com/privacy-policy" target="_blank">privacy policy</a></span><div class="cc-compliance"><a aria-label="dismiss cookie message" role="button" tabindex="0" class="cc-btn cc-dismiss">Got it!</a></div><!--googleon: all--></div>
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-NFGS38"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+<div class="spinner-modal-container" id="sj-spinner">
+    <div class="spinner-modal-body">
+        <div class="spinner"></div>
+    </div>
+</div><main id="app">
+    <div class="container d-none d-print-block">
+    <div class="row">
+        <div class="col-2">
+            <img class="logo-print" src="https://softjourn.com/images/softjourn_logo.svg" alt="Softjourn">
+        </div>
+    </div>
+</div>
+<nav class="top-menu d-none d-md-block d-print-none">
+    <div class="container">
+        <ul class="nav justify-content-end">
+                            <li class="nav-item">
+                    <a class="nav-link" href="https://softjourn.com/expertise/social-distancing-checkerboard-seating-algorithm">Venue Mapping Tool</a>
+                </li>
+                            <li class="nav-item">
+                    <a class="nav-link" href="https://softjourn.com/insights">Insights</a>
+                </li>
+                            <li class="nav-item">
+                    <a class="nav-link" href="https://softjourn.com/blog">Blog</a>
+                </li>
+                            <li class="nav-item">
+                    <a class="nav-link" href="https://softjourn.com/careers">Career</a>
+                </li>
+                    </ul>
+    </div>
+</nav><header class="main-navigation d-print-none">
+    <nav class="container main-navigation-container">
+        <div class="d-md-none">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Mobile Menu">
+                <i class="icon-Menu"></i>
+            </button>
+        </div>
+        <a class="navbar-brand" href="https://softjourn.com">
+            <img class="sj-logo" src="https://softjourn.com/images/softjourn_logo.svg" alt="Softjourn">
+        </a>
+        <div id="main-menu" class="main-menu"><ul class="main-menu-list navbar-nav ml-auto"><li class="nav-item menu-item menu-dropdown"><a href="#" class="nav-link menu-item-label"><span>Company</span> <svg viewBox="0 0 256 512" class="arrow-down"><path fill="currentColor" d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"></path></svg> <hr class="purple-hr"></a> <div aria-hidden="true" class="menu-item-body" style="height: 0px; overflow: hidden; transition-property: height; transition-duration: 200ms;"><div><ul><li><a href="/about-us">About Us</a></li><li><a href="/management-team">Management Team</a></li><li><a href="/history/softjourn">Softjourn Story</a></li><li><a href="/conferences">Events</a></li><li><a href="/press_kit">Press Kit</a></li></ul></div></div></li><li class="nav-item menu-item menu-expanded"><a href="#" class="nav-link menu-item-label"><span>Expertise</span> <svg viewBox="0 0 256 512" class="arrow-down"><path fill="currentColor" d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"></path></svg> <hr class="purple-hr"></a> <div aria-hidden="true" class="menu-item-body" style="height: 0px; overflow: hidden; transition-property: height; transition-duration: 200ms;"><div><div class="container"><div class="row inner"><div class="col-3 inner-nav"><div class="nav flex-column"><a href="#" class="nav-link active">Fintech
+                                </a><a href="#" class="nav-link">Cards &amp; Payments
+                                </a><a href="#" class="nav-link">Media &amp; Entertainment
+                                </a><a href="#" class="nav-link">Ticketing
+                                </a></div></div> <div class="col-9 inner-content"><div class="inner-content-wrap"><div class="row"><div class="col-6"><h3>Fintech</h3> <ul class="sub-nav"><li class=""><a href="/expertise/blockchain">Blockchain Solutions
+                                            </a></li><li class=""><a href="/expertise/psd2-open-api">Open API/PSD2
+                                            </a></li><li class=""><a href="/expertise/fintech-solutions#item-2">Artificial Intelligence &amp; Machine Learning
+                                            </a></li><li class=""><a href="/expertise/fintech-solutions#item-6">Digitization
+                                            </a></li><li class=""><a href="/expertise/fintech-solutions#item-7">Know Your Customer
+                                            </a></li></ul> <a href="/expertise/fintech-solutions" class="view-all">View All</a></div> <div class="col-6"><div class="best-article"><h5 class="best-article-title"><strong>Industry insights:</strong></h5> <a href="/insights/how-digital-onboarding-can-help-fis-survive-the-coronavirus"><div class="img-wrap img-scale-wrap"><img data-src="/media/images/Newsroom/AutomationSVB2.jpg" alt="Industry insights:" class="lazy"></div> <p class="best-article-intro">How Digital Onboarding Can Help FIs Survive the Coronavirus</p></a></div></div></div></div><div class="inner-content-wrap" style="display: none;"><div class="row"><div class="col-6"><h3>Cards &amp; Payments</h3> <ul class="sub-nav"><li class=""><a href="/expertise/payment-processing-development">Payment Processing
+                                            </a></li><li class=""><a href="/expertise/expense-management-systems-development">Expense Management
+                                            </a></li><li class=""><a href="/expertise/secure-payments-consulting-development">Secure Payments
+                                            </a></li><li class=""><a href="/expertise/prepaid-development">Prepaid Cards
+                                            </a></li><li class=""><a href="/expertise/digital-issuance-push-provisioning-development">Push Provisioning
+                                            </a></li><li class=""><a href="/expertise/cards-and-payments#item-16">Remittance
+                                            </a></li></ul> <a href="/expertise/cards-and-payments" class="view-all">View All</a></div> <div class="col-6"><div class="best-article"><h5 class="best-article-title"><strong>Industry insights:</strong></h5> <a href="/blog/article/5-payments-disruptions-pushing-us-toward-a-cashless-future"><div class="img-wrap img-scale-wrap"><img data-src="/media/images/Blog/digitalpaymenttrends.jpg" alt="Industry insights:" class="lazy"></div> <p class="best-article-intro">5 Payments Disruptions Pushing Us Toward a Cashless Future</p></a></div></div></div></div><div class="inner-content-wrap" style="display: none;"><div class="row"><div class="col-6"><h3>Media &amp; Entertainment</h3> <ul class="sub-nav"><li class=""><a href="/expertise/live-streaming-app-development">Live Streaming
+                                            </a></li><li class=""><a href="/expertise/video-on-demand-service-development">Video on Demand (VOD)
+                                            </a></li><li class=""><a href="/expertise/social-video-app-development">Social Media Video Platform
+                                            </a></li><li class=""><a href="/expertise/media-and-entertainment#item-41">Second Screen
+                                            </a></li></ul> <a href="/expertise/media-and-entertainment" class="view-all">View All</a></div> <div class="col-6"><div class="best-article"><h5 class="best-article-title"><strong>Industry insights:</strong></h5> <a href="/insights/how-to-elevate-your-event-with-augmented-reality"><div class="img-wrap img-scale-wrap"><img data-src="/media/images/Blog/AR.jpg" alt="Industry insights:" class="lazy"></div> <p class="best-article-intro">How to Elevate Your Event with Augmented Reality</p></a></div></div></div></div><div class="inner-content-wrap" style="display: none;"><div class="row"><div class="col-6"><h3>Ticketing</h3> <ul class="sub-nav"><li class=""><a href="/expertise/blockchain-in-ticketing">Blockchain in Ticketing
+                                            </a></li><li class=""><a href="/expertise/ticketing#item-50">Ticketing system development / Rewrite
+                                            </a></li><li class=""><a href="/expertise/ticketing#item-43">Ticket Designer / Printing
+                                            </a></li><li class=""><a href="/expertise/ticketing#item-29">Access Control / Ticket Validation / Mobile Ticket Scanning
+                                            </a></li><li class=""><a href="/expertise/ticketing#item-26">Venue Mapping
+                                            </a></li><li class=""><a href="/expertise/ticketing#item-27">Fan Engagement
+                                            </a></li></ul> <a href="/expertise/ticketing" class="view-all">View All</a></div> <div class="col-6"><div class="best-article"><h5 class="best-article-title"><strong>Industry insights:</strong></h5> <a href="/blog/article/5-ways-ticketing-vendors-can-adjust-to-covid-19"><div class="img-wrap img-scale-wrap"><img data-src="/media/images/Blog/Ticeting_cendors_COVID19.jpg" alt="Industry insights:" class="lazy"></div> <p class="best-article-intro">5 Ways Ticketing Vendors Can Adjust to COVID-19</p></a></div></div></div></div></div></div></div></div></div></li><li class="nav-item menu-item menu-expanded"><a href="#" class="nav-link menu-item-label"><span>Business</span> <svg viewBox="0 0 256 512" class="arrow-down"><path fill="currentColor" d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"></path></svg> <hr class="purple-hr"></a> <div aria-hidden="true" class="menu-item-body" style="height: 0px; overflow: hidden; transition-property: height; transition-duration: 200ms;"><div><div class="container"><div class="row inner"><div class="col-3 inner-nav"><div class="nav flex-column"><a href="#" class="nav-link active">Service Offerings
+                                </a><a href="#" class="nav-link">Technology solutions
+                                </a></div></div> <div class="col-9 inner-content"><div class="inner-content-wrap"><div class="row"><div class="col-6"><h3>Service Offerings</h3> <ul class="sub-nav"><li class=""><a href="/business/service-offerings#item-13">Consulting
+                                            </a></li><li class=""><a href="/business/service-offerings#item-16">Research &amp; Development
+                                            </a></li><li class=""><a href="/business/service-offerings#item-17">UI/UX Design
+                                            </a></li><li class=""><a href="/business/service-offerings#item-15">Application Maintenance
+                                            </a></li></ul> <a href="/business/service-offerings" class="view-all">View All</a></div> <div class="col-6"><div class="best-article"><h5 class="best-article-title"><strong>Industry insights:</strong></h5> <a href="/blog/article/virtual-software-development"><div class="img-wrap img-scale-wrap"><img data-src="/media/Main_menu/virtual-software-development.jpg" alt="Industry insights:" class="lazy"></div> <p class="best-article-intro">Virtual Software Development</p></a></div></div></div></div><div class="inner-content-wrap" style="display: none;"><div class="row"><div class="col-6"><h3>Technology solutions</h3> <ul class="sub-nav"><li class=""><a href="/expertise/blockchain">Blockchain
+                                            </a></li><li class=""><a href="/business/technology-solutions#item-1">Web Development
+                                            </a></li><li class=""><a href="/business/technology-solutions#item-2">Java Development
+                                            </a></li><li class=""><a href="/business/technology-solutions#item-3">Microsoft Development
+                                            </a></li><li class=""><a href="/business/technology-solutions#item-5">Mobile Development
+                                            </a></li></ul> <a href="/business/technology-solutions" class="view-all">View All</a></div> <div class="col-6"><div class="best-article"><h5 class="best-article-title"><strong>Industry insights:</strong></h5> <a href="/blog/article/8-best-practices-for-a-smooth-web-project-deployment"><div class="img-wrap img-scale-wrap"><img data-src="/media/images/Blog/WebDev0.jpg" alt="Industry insights:" class="lazy"></div> <p class="best-article-intro">8 Best Practices for a Smooth Web Project Deployment</p></a></div></div></div></div></div></div></div></div></div></li><li class="nav-item menu-item" duration="200"><a href="/contact-us" class="nav-link menu-item-label">
+        Contact us
+        <hr class="purple-hr"></a></li></ul></div>        <div class="nav-search order-0 order-md-1">
+            <form action="https://softjourn.com/search" method="GET" class="search-form">
+                <span class="icon-search passive"></span>
+                <input type="text" name="query" class="search-input" onfocus="placeholder=&quot;&quot;;" onblur="placeholder=&quot;SEARCH&quot;;" placeholder="SEARCH">
+                <span class="icon-close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </span>
+            </form>
+        </div>
+    </nav>
+    <div class="d-md-none mobile-menu">
+        <div class="container">
+            <nav class="navbar-collapse collapse" id="mobileMenu">
+                <ul class="navbar-nav">
+            <li class="nav-item">
+            <a class="nav-link nav-item-empty" href="https://softjourn.com/expertise/social-distancing-checkerboard-seating-algorithm">Venue Mapping Tool</a>
+        </li>
+                <li class="nav-item">
+            <a class="nav-link nav-item-empty" href="https://softjourn.com/insights">Insights</a>
+        </li>
+                <li class="nav-item">
+            <a class="nav-link nav-item-empty" href="https://softjourn.com/blog">Blog</a>
+        </li>
+                <li class="nav-item">
+            <a class="nav-link nav-item-empty" href="https://softjourn.com/careers">Career</a>
+        </li>
+                <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="mobileDropdown4" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+                Company
+            </a>
+            <div class="dropdown-menu" aria-labelledby="mobileDropdown4">
+                <ul class="inner-nav-list">
+                                            <li><a class="inner-nav-item" href="https://softjourn.com/about-us">About Us</a></li>
+                                            <li><a class="inner-nav-item" href="https://softjourn.com/management-team">Management Team</a></li>
+                                            <li><a class="inner-nav-item" href="https://softjourn.com/history/softjourn">Softjourn Story</a></li>
+                                            <li><a class="inner-nav-item" href="https://softjourn.com/conferences">Events</a></li>
+                                            <li><a class="inner-nav-item" href="https://softjourn.com/press_kit">Press Kit</a></li>
+                                    </ul>
+            </div>
+        </li>
+                <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="mobileDropdown5" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+                Expertise
+            </a>
+            <div class="dropdown-menu" aria-labelledby="mobileDropdown5">
+                <ul class="inner-nav-list">
+                                            <li><a class="inner-nav-item" href="https://softjourn.com/expertise/fintech-solutions">Fintech</a></li>
+                                            <li><a class="inner-nav-item" href="https://softjourn.com/expertise/cards-and-payments">Cards &amp; Payments</a></li>
+                                            <li><a class="inner-nav-item" href="https://softjourn.com/expertise/media-and-entertainment">Media &amp; Entertainment</a></li>
+                                            <li><a class="inner-nav-item" href="https://softjourn.com/expertise/ticketing">Ticketing</a></li>
+                                    </ul>
+            </div>
+        </li>
+                <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="mobileDropdown6" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+                Business
+            </a>
+            <div class="dropdown-menu" aria-labelledby="mobileDropdown6">
+                <ul class="inner-nav-list">
+                                            <li><a class="inner-nav-item" href="https://softjourn.com/business/service-offerings">Service Offerings</a></li>
+                                            <li><a class="inner-nav-item" href="https://softjourn.com/business/technology-solutions">Technology solutions</a></li>
+                                    </ul>
+            </div>
+        </li>
+                <li class="nav-item">
+            <a class="nav-link nav-item-empty" href="https://softjourn.com/contact-us">Contact us</a>
+        </li>
+    </ul>            </nav>
+        </div>
+    </div>
+</header>    <div class="content" id="content">
+            <div itemscope="" itemtype="http://schema.org/Organization">
+
+        <div class="container">
+            <span style="display: none" itemprop="name">Softjourn, Inc.</span>
+            <main class="row contact-info-wrap">
+                <div class="col-12 col-md-8">
+                    <h2>Let's Talk!</h2>
+                    <p>Fill in the form below and we will get back to you as soon as possible!</p>
+                    <div class="mr-3">
+                        <form class="contact-form needs-validation" id="contact-form" action="https://softjourn.com/contact-us">
+    <div class="wrap-message">
+    </div>
+    <input type="hidden" name="_token" value="WfET7kkk7LhPMfarMG0Fc1pcZL0BACEwgJaCWwgC">    <input type="hidden" name="type" value="requestcall">
+    <input type="hidden" name="page" value="https://softjourn.com/contact-us">
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" id="name" placeholder="* Name" value="" required="" name="name">
+            <div class="invalid-feedback">
+                Valid name is required.
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <input type="email" class="form-control" id="email" placeholder="* Email" name="email" required="">
+            <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" name="phone" id="phone" placeholder="* Phone" value="" required="">
+            <div class="invalid-feedback">
+                Valid name is required.
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" id="country" placeholder="* Country" name="country" required="">
+            <div class="invalid-feedback">
+                Please enter country.
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="character-wrap" style="position: relative;"><textarea rows="4" cols="50" class="form-control textarea-counter w-100" name="text" placeholder="* Tell us about your project" required="" style="padding-right: 35px;"></textarea><span class="remaining" style="display: none; position: absolute; opacity: 0.8; color: rgb(54, 54, 66); right: 15px; bottom: 10px;">499</span></div>
+        </div>
+    </div>
+
+    <div class="row text-left">
+        <div class="col-12">
+            <label class="checkbox-container mt-3">I want to receive news and updates.
+                <input type="checkbox" name="subscribe">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="row text-left">
+        <div class="col-12 text-agree">
+            <label class="checkbox-container my-0 ">* By checking this box, I agree to the
+                <a href="/privacy-policy" class="purple-link" target="_blank">Privacy Policy</a>
+                and
+
+                <a href="/terms-of-use" class="purple-link" target="_blank">Terms of Use</a>
+                <input type="checkbox" v-model="agree" name="agree">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </div>
+
+    <input type="hidden" name="g-recaptcha-response" id="reCaptchaResponse" value="03AGdBq26H56OllMihPdvi7evPe1Tx3Nbb1QxmQSTBhfYAbxoF3nvyP-AObZP8S-jL0OvSNChBPWpxvymH0EMW5Kl_O9D35uyOqkUk8yamvA1d9O1oTiRuBT6UklPNjXN7NvenDK9Eu6MKOgUvNYkk2y9v_cKOIrmNwwkbXDoP-VV9evF7ldWzObEJfXzfj3omOfjfcPCfaAudBCg6y6YlbGWXaXg9GZWA04qL694eJk5gffLzv8StM3gtlXT5zcVPUWlhfQzs1SCoPGNUI2LiqHEULcAOJnCYespWn-sD4-I8xx8Wr_XVMxfmZ02bH0Rhh9Bg-qjFdzGxz6pnA05GS6ZqdStJTTyuO2UQporXdpO9YZtErvjvTUTiG54lce6MMmSDi2LYicLqst1Ur0axBu9P2gVUoWF5tciprD_JGpHf2cbgi1PWqjA9sGkMkJf8cankDsAHVwJL8L5CUuyC42sh0ftkeRg4Kw">
+    <input type="hidden" name="g-recaptcha-action" value="contact_us">
+
+    <div class="my-4 row justify-content-md-center">
+        <div class="col-md-auto col-sm-12">
+            <button class="w-100 btn btn-purple rounded-0 px-4 py-2 text-uppercase" type="submit">Connect Us</button>
+        </div>
+    </div>
+    
+        
+        
+        
+        
+            
+    
+</form>
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-12 mail-info">
+                            <h3>Write to us</h3>
+
+                            <h5 class="contact-title">General Information:</h5>
+                            <div class="contact-info">
+                                <a href="mailto:info@softjourn.com" target="_top" itemprop="email">info@softjourn.com</a>
+                            </div>
+
+                            <h5 class="contact-title">Sales:</h5>
+                            <div class="contact-info">
+                                <a href="mailto:sales@softjourn.com" target="_top">sales@softjourn.com</a>
+                            </div>
+
+                            <h5 class="contact-title">HR department:</h5>
+                            <div class="contact-info">
+                                UA: <a href="mailto:hr-ua@softjourn.com" target="_top">hr-ua@softjourn.com</a><br>
+                                PL: <a href="mailto:hr-pl@softjourn.com" target="_top">hr-pl@softjourn.com</a>
+                            </div>
+
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-12 phone-info">
+                            <h3>Call us</h3>
+                            <div class="phones">
+                                <div class="country-flag usa"><strong>Fremont</strong></div>
+                                Phone: <a href="tel:+15107441528" itemprop="telephone">+1.510.744.1528</a><br>
+                                Tollfree: <a href="tel:+1.888.763.8576">+1.888.SOFTJRN</a> (<a href="tel:+1.888.763.8576">+1.888.763.8576</a>)
+                                <br>
+                                Fax: <a href="tel:+18153012772" itemprop="faxNumber">+1.815.301.2772</a><br>
+                            </div>
+
+                            <div class="phones">
+                                <div class="country-flag ukraine"><strong>Ivano-Frankivsk</strong></div>
+                                HR: <a href="tel:+380956635883">+38 (095) 663-58-83</a><br>
+                                Phone: <a href="tel:+15109436217">+1.510.943.6217 </a> (US line)<br>
+
+                            </div>
+                            <div class="phones">
+                                <div class="country-flag poland"><strong>Wroclaw</strong></div>
+                                HR: <a href="tel:+48786949209">+4.878.694.9209</a><br>
+                                Office: <a href="tel:+48713073527">+4.871.307.3527</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <section class="offices">
+            <div class="container">
+                <h2 class="text-center">
+                    Our Offices
+                </h2>
+                <div class="cities">
+                    <div class="city-info">
+                        <div class="anchor" id="usa">
+                        </div>
+                        <div class="logo-city-wrap">
+                            <img class="logo-city img-responsive lazy" data-src="/images/pages/contact-us/san_francisco.png">
+                            <div class="time-wrap">
+                                <span id="fremont-time">11:51</span>
+                            </div>
+                        </div>
+                        <div class="address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+                            <h3 itemprop="addressLocality">United States</h3>
+                            <address class="" itemprop="streetAddress" style="height: 56px;">
+                                39270 Paseo Padre Pkwy, Suite 251
+                                Fremont, CA 94538
+                            </address>
+                            <a class="purple-link" href="https://www.google.com/maps/place/Softjourn,+Inc.+HQ/@37.5533543,-121.9806353,17z/data=!4m12!1m6!3m5!1s0x808fc08fd604cc25:0x8b3891433d38887d!2sSoftjourn,+Inc.+HQ!8m2!3d37.5533543!4d-121.9784413!3m4!1s0x808fc08fd604cc25:0x8b3891433d38887d!8m2!3d37.5533543!4d-121.9784413" target="_blank">Get Directions</a>
+                        </div>
+                    </div>
+                    <div class="city-info">
+                        <div class="anchor" id="ukraine">
+                        </div>
+                        <div class="logo-city-wrap">
+                            <img class="logo-city lazy" data-src="/images/pages/contact-us/ivano-frankivsk.png">
+                            <div class="time-wrap">
+                                <span id="if-time">21:51</span>
+                            </div>
+                        </div>
+                        <div class="address">
+                            <h3>Ukraine</h3>
+                            <address class="" style="height: 56px;">
+                                Tychyny, 7 and Tychyny, 9<br> Ivano-Frankivsk, 76019
+                            </address>
+                            <a class="purple-link" href="https://www.google.com/maps/place/Softjourn+%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0/@48.8610482,25.0961988,10z/data=!4m8!1m2!2m1!1sTychyny,+9+softjourn!3m4!1s0x4730c1133b2d03f1:0xe1fd0abfa36f74e7!8m2!3d48.925317!4d24.705723" target="_blank">Get Directions</a>
+                        </div>
+                    </div>
+                    <div class="city-info">
+                        <div class="anchor" id="poland">
+                        </div>
+                        <div class="logo-city-wrap">
+                            <img class="logo-city img-responsive lazy" data-src="/images/pages/contact-us/wroclaw.png">
+                            <div class="time-wrap">
+                                <span id="wroclaw-time">20:51</span>
+                            </div>
+                        </div>
+                        <div class="address">
+                            <h3>Poland</h3>
+                            <address class="" style="height: 56px;">
+                                Pl. Jana Pawła II 9, 50-136 Wrocław,
+                                6th floor, Nowy Alexanderhaus
+                            </address>
+                            <a class="purple-link" href="https://www.google.com/maps/place/Softjourn,+Inc.+Innovation+and+R%26D+-+Poland/@51.1114817,17.0211183,17z/data=!4m8!1m2!2m1!1sPl.+Jana+Paw%C5%82a+II+9,+50-136+Wroc%C5%82aw,++Nowy+Alexanderhaus!3m4!1s0x470fc20a389d56a5:0xd4bb9fb5a808bfa0!8m2!3d51.1114274!4d17.0232771" target="_blank">Get Directions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="partnership-and-recognition">
+    <h2 class="text-center">Partnership &amp; Recognition</h2>
+    <div class="bottom-text py-3 mt-0 mt-sm-5">
+        <div class="container text-center">
+            <div class="row img-block">
+                <div class="col-lg-2 col-sm-4 col-6">
+                    <span class="helper"></span>
+                    <img src="/images/partners/Top_100.svg">
+                </div>
+                <div class="col-lg-2 col-sm-4 col-6">
+                    <span class="helper"></span>
+                    <img src="/images/partners/Intix.svg">
+                </div>
+                <div class="col-lg-2 col-sm-4 col-6">
+                    <span class="helper"></span>
+                    <img src="/images/partners/Microsoft_Gold_Partner.svg">
+                </div>
+                <div class="col-lg-2 col-sm-4 col-6">
+                    <span class="helper"></span>
+                    <img src="/images/partners/Monax.svg" style="height: auto">
+                </div>
+                <div class="col-lg-2 col-sm-4 col-6">
+                    <span class="helper"></span>
+                    <img src="/images/partners/Xamarin.svg">
+                </div>
+                <div class="col-lg-2 col-sm-4 col-6">
+                    <span class="helper"></span>
+                    <img src="/images/partners/Inc_5000.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>    </div>
+    <footer class="footer-slide h-auto" data-section-name="footer" style="position: relative">
+    <div class="container">
+        <div class="footer row">
+            <div class="col-12">
+                <div class="row justify-content-between">
+                    <div class="col-md-9 col-lg-8 order-md-1 order-2">
+                        <div class="row justify-content-between">
+                            <div class="col-6 col-md-3 col-lg-auto footer-links">
+                    <h6 class="links-header">Company</h6>
+            <ul class="navbar-nav">
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://softjourn.com/about-us">About us</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://softjourn.com/history/softjourn">Softjourn Story</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://softjourn.com/management-team">Management Team</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://softjourn.com/contact-us">Contact Us</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://softjourn.com/press_kit">Press Kit</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://softjourn.com/conferences">Events</a>
+                    </li>
+                            </ul>
+            </div>
+    <div class="col-6 col-md-3 col-lg-auto footer-links">
+                    <h6 class="links-header">Expertise</h6>
+            <ul class="navbar-nav">
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://softjourn.com/expertise/fintech-solutions">Fintech</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://softjourn.com/expertise/cards-and-payments">Cards &amp; Payments</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://softjourn.com/expertise/ticketing">Ticketing</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://softjourn.com/expertise/media-and-entertainment">Media &amp; Entertainment</a>
+                    </li>
+                            </ul>
+            </div>
+    <div class="col-6 col-md-3 col-lg-auto footer-links">
+                    <h6 class="links-header">Business</h6>
+            <ul class="navbar-nav">
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://softjourn.com/business/service-offerings">Service Offerings</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://softjourn.com/business/technology-solutions">Technology</a>
+                    </li>
+                            </ul>
+            </div>
+    <div class="col-6 col-md-3 col-lg-auto footer-links">
+                    <h6 class="links-header">Knowledge Center</h6>
+            <ul class="navbar-nav">
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://softjourn.com/blog">Blog</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://softjourn.com/careers">Careers</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://softjourn.com/insights">Insights</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://softjourn.com/privacy-policy">Privacy Policy</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://softjourn.com/terms-of-use">Terms of Use</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://softjourn.com/holidays2020">Holiday Schedule 2020</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://softjourn.com/holidays2021">Holiday Schedule 2021</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://softjourn.com/sitemap">Sitemap</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://softjourn.com/documents">Documents</a>
+                    </li>
+                            </ul>
+            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 offset-lg-1 order-md-2 order-1">
+                        <a href="https://softjourn.com" class="d-inline-block">
+                            <img class="softjourn-logo img-responsive" src="/images/icons/logo_white.svg" alt="Softjourn" align="right">
+                        </a>
+                        <div class="social">
+                            <div class="nav-item">
+                                <a href="https://www.facebook.com/Softjourn/" class="icon icon-facebook background-height" target="_blank"></a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="https://twitter.com/Softjourn" class="icon icon-twitter" target="_blank"></a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="https://www.youtube.com/channel/UC10nw4c-vVhEcT2LOAGUx4Q" class="icon icon-youtube" target="_blank"></a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="https://www.linkedin.com/company/softjourn-inc" class="icon icon-linkedin" target="_blank"></a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="https://www.instagram.com/softjourn/" class="icon icon-instagram" target="_blank"></a>
+                            </div>
+                        </div>
+                        <div class="discover-text">
+                            Discover Softjourn by reaching us
+                            @our  offices in
+                        </div>
+                        <div class="row countries d-md-none my-md-0 my-3 mobile-flags">
+                            <div class="col-xs-4 col-auto">
+                                <a class="usa flag" href="https://softjourn.com/contact-us#usa">United States</a>
+                            </div>
+                            <div class="col-xs-4 col-auto">
+                                <a href="https://softjourn.com/contact-us#ukraine" class="ukraine flag">Ukraine</a>
+                            </div>
+                            <div class="col-xs-4 col-auto">
+                                <a href="https://softjourn.com/contact-us#poland" class="poland flag">Poland</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-md-5 mb-5">
+                    <div class="col-md-9 col-12">
+                        <div class="rating mr-md-5 py-2">
+                            Rated 4.85/5 stars average customer rating for delivery excellence
+                        </div>
+                        <div class="mt-4 copyright">
+                            © 2021 Softjourn, Inc. All Rights Reserved.
+                        </div>
+                    </div>
+                    <div class="col-3 countries d-none d-md-block desktop-flags">
+                        <a href="https://softjourn.com/contact-us#usa" class="usa flag">United States</a>
+                        <a href="https://softjourn.com/contact-us#ukraine" class="ukraine flag">Ukraine</a>
+                        <a href="https://softjourn.com/contact-us#poland" class="poland flag">Poland</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <button id="upBtn" class="down" title="Go to top"><a></a></button>
+
+</footer></main>
+
+
+<script src="/js/manifest.js?id=7db827d654313dce4250"></script><iframe name="__uspapiLocator" tabindex="-1" role="presentation" aria-hidden="true" title="Blank" style="display: none; position: absolute; width: 1px; height: 1px; top: -9999px;"></iframe><iframe tabindex="-1" role="presentation" aria-hidden="true" title="Blank" src="https://consentcdn.cookiebot.com/sdk/bc-v2.min.html" style="position: absolute; width: 1px; height: 1px; top: -9999px;"></iframe>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1629501317375121");fbq("track","PageView");fbq("track","CompleteRegistration");</script>
+<noscript>
+ <img height="1" width="1" src="https://www.facebook.com/tr?id=1629501317375121&amp;ev=PageView
+&amp;noscript=1">
+</noscript>
+<script type="text/javascript" id="gtm-vimeo-tracking">(function(l,f,n){function q(){var a=r(v("iframe"),w);a.length&&x(function(){m(a,y)})}function w(a){return-1<a.src.indexOf("player.vimeo.com/video/")}function x(a){p(f.Vimeo)?z("https://player.vimeo.com/api/player.js",a):a()}function y(a){if(!a.__vimeoTracked){a.__vimeoTracked=!0;var d=new Vimeo.Player(a),b=n._track.percentages,c={Play:"play",Pause:"pause","Watch to End":"ended"},e={};d.getVideoTitle().then(function(k){m(["Play","Pause","Watch to End"],function(g){if(n.events[g])d.on(c[g],function(){t(g,
+k)})});if(b)d.on("timeupdate",function(g){g=g.percent;for(var h in b)g>=b[h]&&!e[h]&&(e[h]=!0,t(h,k))})})}}function A(a){a=B({},{events:{Play:!0,Pause:!0,"Watch to End":!0},percentages:{each:[],every:[]}},a);m(["each","every"],function(c){var e=a.percentages[c];u(e)||(e=[e]);e&&(a.percentages[c]=C(e,Number))});var d=[].concat(a.percentages.each);a.percentages.every&&m(a.percentages.every,function(c){var e=100/c,k=[],g;for(g=1;g<e;g++)k.push(c*g);d=d.concat(r(k,function(h){return 0<h&&100>h}))});var b=
+D(d,function(c,e){c[e+"%"]=e/100;return c},{});a._track={percentages:b};return a}function E(a){a=a||{};var d=a.name||"dataLayer",b=a.name||f.GoogleAnalyticsObject||"ga",c="_gaq",e={gtm:function(g,h){k.push({event:"vimeoTrack",attributes:{videoAction:g,videoName:h}})},cl:function(g,h){f[c].push(["_trackEvent","Videos",g,h])},ua:function(g,h){f[b]("send","event","Videos",g,h)}};switch(a.type){case "gtm":var k=f[d]=f[d]||[];break;case "ua":f[b]=f[b]||function(){(f[b].q=f[b].q||[]).push(arguments)};f[b].l=
++new Date;break;case "cl":f[c]=f[c]||[];break;default:p(f[d])?b&&!p(f[b])?a.type="ua":p(f[c])||p(f[c].push)||(a.type="cl"):(a.type="gtm",k=f[d]=f[d]||[])}return e[a.type]}function B(){var a=[].slice.call(arguments),d=a.shift(),b,c;for(c=0;c<a.length;c++){var e=a[c];for(b in e)d[b]=e[b]}return d}function u(a){return Array.isArray_?Array.isArray_(a):"[object Array]"===Object.prototype.toString.call(a)}function m(a,d){if(Array.prototype.forEach_)return a.forEach.call(a,d);var b;for(b=0;b<a.length;b++)d.call(f,
+a[b],b,a)}function C(a,d){if(Array.prototype.map_)return a.map.call(a,d);var b=[];m(a,function(c,e,k){b.push(d.call(f,c,e,k))});return b}function r(a,d){if(Array.prototype.filter)return a.filter.call(a,d);var b=[];m(a,function(c,e,k){d.call(f,c,e,k)&&b.push(c)});return b}function D(a,d,b){if(Array.prototype.reduce)return a.reduce.call(a,d,b);var c;for(c=0;c<a.length;c++){var e=a[c];b=d.call(f,b,e,a,c)}return b}function p(a){return"undefined"===typeof a}function v(a){u(a)||(a=[a]);return[].slice.call(l.querySelectorAll(a.join()))}
+function z(a,d){function b(){d&&(d(),e.onload=null)}var c=l.getElementsByTagName("script")[0];var e=l.createElement("script");e.onload=b;e.src=a;e.async=!0;c.parentNode.insertBefore(e,c)}if(!navigator.userAgent.match(/MSIE [678]\./gi)){n=A(n);var t=E(n.syntax);"loading"!==l.readyState?q():l.addEventListener("DOMContentLoaded",q);l.addEventListener("load",q,!0)}})(document,window,{events:{Play:!0,Pause:!0,"Watch to End":!0},percentages:{every:25,each:[10,90]}});</script><div id="d9_jBhY31HyglomLsjX1c29yPNE7RHLvVxOkx3KgGRD8" style="width: 0px; height: 0px;"><img id="i9_jBhY31HyglomLsjX1c29yPNE7RHLvVxOkx3KgGRD8" width="0" height="0" src="https://8c37cfc8f03040159c63a1b561fcc3f7.svc.dynamics.com/t/v/9_jBhY31HyglomLsjX1c29yPNE7RHLvVxOkx3KgGRD8?ad=https%3A%2F%2Fsoftjourn.com%2Fcontact-us&amp;rf=https%3A%2F%2Fsoftjourn.com%2F&amp;id=8789610726"></div><script type="text/javascript" id="">(function(e,b,f,h,c,a){var g=function(c){var b=0,a=function(){0==b&&(b++,w&&w.w(e,f,c))},d=document.createElement("script");d.src=h;d.type="text/javascript";d.onload=a;d.onreadystatechange=function(){"complete"!=this.readyState&&"loaded"!=this.readyState||a()};var g=document.getElementsByTagName("head")[0];g.appendChild(d)};"function"===typeof c?null===a?g(function(){c(e,b,f)}):a.w(e,f,function(a){c(e,b,f,a)}):g()})("9_jBhY31HyglomLsjX1c29yPNE7RHLvVxOkx3KgGRD8","https://8c37cfc8f03040159c63a1b561fcc3f7.svc.dynamics.com/f",
+"https://8c37cfc8f03040159c63a1b561fcc3f7.svc.dynamics.com/t","https://8c37cfc8f03040159c63a1b561fcc3f7.svc.dynamics.com/t/w","undefined"===typeof ms_tr_il_08?null:ms_tr_il_08,"undefined"===typeof ms_tr_il_w_01?null:ms_tr_il_w_01);</script>
+<meta name="norton-safeweb-site-verification" content="-j11v9ya-f1k35es0zv72x6j22w7ty88fg5ht6n-m5g5xfuapvug6265x9y8rt5lwf5nesu5eyel1gkqxllyzioso9e9tqj0-5mynguuart89o-fuev6x1wtcy4jnabo">
+
+<meta name="norton-safeweb-site-verification" content="-j11v9ya-f1k35es0zv72x6j22w7ty88fg5ht6n-m5g5xfuapvug6265x9y8rt5lwf5nesu5eyel1gkqxllyzioso9e9tqj0-5mynguuart89o-fuev6x1wtcy4jnabo">
+
+<meta name="dmca-site-verification" content="dTR0aDY1NnZPVkpLRi81MkRGdlNvdz090"><script type="text/javascript" id="" src="https://mktdplp102cdn.azureedge.net/public/latest/js/form-loader.js?v=1.64.2003.0"></script><script type="text/javascript" id="">window.__lo_site_id=257671;(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="https://d10lpsik1i8c69.cloudfront.net/w.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+<div class="d365-mkt-config" style="display:none" data-website-id="9_jBhY31HyglomLsjX1c29yPNE7RHLvVxOkx3KgGRD8" data-hostname="8c37cfc8f03040159c63a1b561fcc3f7.svc.dynamics.com">
+</div>
+<script src="/js/vendor.js?id=2ffc328b7d4a865fefda"></script>
+<script src="/js/app.js?id=3ebba658b37a2682efd4"></script>
+<script src="/js/partials/up-button.js?id=bb77483ab5cc9b4ab2d6"></script>
+
+<script src="/js/common.js?id=1dd53d4d6c4147790be6"></script>
+<script>
+
+</script>
+
+    <script src="/js/pages/contact-us.js?id=71f44dbefb26ebc9c564"></script>
+    <script>
+        var tz = {
+            if: -7200,
+            fr: 28800,
+            pl: -3600
+        }
+    </script>
+    <script>
+        const thanksPageRoute = 'https://softjourn.com/thank-you';
+    </script>
+    <script src="https://softjourn.com/js/partials/contact-form.js"></script>
+    <script src="https://softjourn.com/js/partials/counter-textarea.js"></script>
+
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadRecaptchaCallback&amp;render=6LdEjogUAAAAAKaMsdRKMoRm7eP9Ke7Du11mc3Ug" defer=""></script>
+
+
+<iframe src="https://8c37cfc8f03040159c63a1b561fcc3f7.svc.dynamics.com/t/c/9_jBhY31HyglomLsjX1c29yPNE7RHLvVxOkx3KgGRD8?trackwebsitevisited=true&amp;ad=https%3A%2F%2Fsoftjourn.com%2Fcontact-us&amp;rf=https%3A%2F%2Fsoftjourn.com%2F&amp;id=8160225368" style="display: none;"></iframe><link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
+<script type="text/javascript" id="" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script type="text/javascript" id="">window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#efefef",text:"#404040"},button:{background:"#00c853"}},content:{message:"We use cookies to ensure the optimal functioning of the website and facilitate your use of our website. It allows us, among other things, to adjust the appearance of the website to your preferences. Be aware you can disable cookies at anytime.  More information can be found in the",link:"privacy policy",href:"https://softjourn.com/privacy-policy"}})});</script><div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdEjogUAAAAAKaMsdRKMoRm7eP9Ke7Du11mc3Ug&amp;co=aHR0cHM6Ly9zb2Z0am91cm4uY29tOjQ0Mw..&amp;hl=ru&amp;v=_KUxfxvAoJ4k7SaKyLbja4Mi&amp;size=invisible&amp;cb=d2vorrc26clo" width="256" height="60" role="presentation" name="a-p9a9g9pq1j3j" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div><iframe id="lo-cs-frame" src="about:blank" aria-hidden="true" title="Lucky Orange" style="display: none !important;"></iframe><div id="LoAvailableBtn" style="padding: 10px; height: auto; position: fixed; bottom: 0px; right: 20px; z-index: 9999; background-color: rgba(255, 255, 255, 0.97); color: rgb(0, 0, 0); direction: ltr; font-weight: bold; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 140%; box-shadow: rgb(0, 0, 0) 0px 0px 5px; border-top: 2px solid rgb(255, 255, 255); border-right: 2px solid rgb(255, 255, 255); border-left: 2px solid rgb(255, 255, 255); border-image: initial; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom: none; cursor: pointer; display: none; margin-bottom: 0px; opacity: 0;">Live Help is Online.&nbsp; <img id="lo_green_blinker" width="16" height="16" style="width:16px; height:16px; border:none; padding:0; margin:0; margin-left:3px;" src="https://d10lpsik1i8c69.cloudfront.net/graphics/blink_green.png" align="right" alt=""></div><div id="LoChatMinimizedButton" style="padding:10px; height:auto; position:fixed;bottom:0px; right:20px;  z-index:9999; background-color: rgba(255,255,255,0.97); color: #000000; direction: ltr; font-weight:bold; font-family: Arial, Helvetica, sans-serif; font-size:12px; line-height:140%;;  -box-shadow: 0px 0px 5px #000; box-shadow: 0px 0px 5px #000; -webkit-box-shadow: 0px 0px 5px #000; border:2px solid #fff;  border-bottom:none; -webkit-border-top-left-radius: 10px; -webkit-border-top-right-radius: 10px; -moz-border-radius-topleft: 10px; -moz-border-radius-topright: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom:none; ;cursor: pointer; ;max-width: 250; display: none;;margin-bottom:0px">Chatting<div class="lo-badge" style="display: none; background-color: red; border-radius: 50%; box-shadow: black 0px 0px 5px; color: white; height: 25px; line-height: 25px; position: absolute; text-align: center; width: 25px; right: 57px; bottom: 23px;">0</div></div><div id="lo_chat_box" style="transition: cubic-bezier(0, 1, 0.5, 1) .35s; border:2px solid white; width:350px; max-width:350px; border-bottom:none; display:none; bottom:-1000px; opacity:0;  position:fixed; bottom:-1000px; ; margin-bottom: 0px ;right:20px;  z-index:999999;   background-color: #ffffff; background-color: rgba(255,255,255,0.97); color: #000000; direction: ltr; font-family: Arial, Helvetica, sans-serif; font-size:13px; line-height:130%; color: #000000; -box-shadow: 0px 0px 5px rgba(0,0,0,0.5); box-shadow: 0px 0px 5px  rgba(0,0,0,0.5); -webkit-box-shadow: 0px 0px 5px  rgba(0,0,0,0.5);;-webkit-border-top-left-radius: 10px; -webkit-border-top-right-radius: 10px; -moz-border-radius-topleft: 10px; -moz-border-radius-topright: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; "><div onclick="LO.min_chat();" tabindex="0" id="lo_chat_top" style="color:#000000; background-color: #DADADA; background-color: rgba(234,234,234,0.97); cursor:pointer; font-weight:bold; font-family: Arial, Helvetica, sans-serif; font-size:13px; line-height:13px; -webkit-border-top-left-radius: 10px; -webkit-border-top-right-radius: 10px; -moz-border-radius-topleft: 10px; -moz-border-radius-topright: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; "><div style="float:right; margin-top:10px; margin-right:10px; position:absolute; right:0;" id="lo_chat_min_box"><div style="cursor: pointer; float:right; margin-left:10px; opacity:0.6; font-size:1empx; font-weight:bold;" onclick="LO.end_chat();" tabindex="0" id="lo_chat_end">×</div><div style="cursor: pointer; float:right; opacity:0.6; font-size:1empx; font-weight:bold;" id="lo_chat_min">–</div><div style="clear:both"></div></div><div id="lo_operator">undefined</div><div style="clear:both"></div><div style="height:0px; width:100%; border-top:1px solid #ffffff;border-bottom:1px solid #EAEAEA"></div></div><div id="lo_chat_log" style="height:225px; max-height: 30vh; font-size:13px; margin-top:10px; line-height: 120%; padding:10px; overflow-y:auto; margin-bottom:10px;font-family:inherit;font-size:inherit;"></div><form action="" onsubmit="LO.submit_chat(); return false;"><div id="lo_chat_input" style="position:relative; width: 100%; "><div class="lo-fx-hr" style="height:0px; margin-bottom:0px; margin-top:0px; width:100%; border-top:1px solid #ffffff;border-bottom:1px solid #EAEAEA"></div><div style="padding:10px;"><label for="lo_chat_textarea" style="display:none">Chat Input Box</label><textarea id="lo_chat_textarea" disabled="disabled" rows="2" style="color: black; background-color: rgb(255, 255, 255); border-radius: 5px; padding: 7px; height: auto; width: 100%; font-family: sans-serif; text-transform: none; resize: none;" dir="null" data-last-scroll-height="0"></textarea></div><div id="lo_chat_sound_holder" style="position:absolute; right:0px; top:-25px; width:100%;"><div style="cursor: pointer; float:right; opacity:0.6; padding-right:10px; height:16px;" id="lo_chat_sound"><img alt="Click to mute chat sounds" src="https://d10lpsik1i8c69.cloudfront.net/graphics/sound-on.png"></div><div id="lo_chat_status" style="padding-left:10px; font-size:11px; color:#DADADA"></div><div style="clear:both;"></div></div></div></form><div id="lo_chat_submit_btn" style="display:none; padding:10px; padding-top:0px;"><button onclick="LO.submit_chat();" type="button" style="width:100%; box-sizing: border-box; font-size: 12px;  letter-spacing:initial; text-transform:none; line-height: 1.3333333;  color: #fff;  background-color: #FFFFFF;  display: inline-block;  padding: 6px 12px;   font-weight: bold;  line-height: 1.42857143;  text-align: center;  white-space: nowrap;  vertical-align: middle;  -ms-touch-action:manipulation;  touch-action: manipulation;  cursor: pointer; outline:none; -webkit-user-select: none;  -moz-user-select: none;  -ms-user-select: none; user-select: none;  background-image: none;  background: #FFFFFF;  background-image: -webkit-linear-gradient(top, #FFFFFF, #AAAAAA);  background-image: -moz-linear-gradient(top, #FFFFFF, #AAAAAA);  background-image: -ms-linear-gradient(top, #FFFFFF, #AAAAAA);  background-image: -o-linear-gradient(top, #FFFFFF, #AAAAAA);  background-image: linear-gradient(to bottom, #FFFFFF, #AAAAAA); -webkit-border-radius: 5;  -moz-border-radius: 5;  border-color: #FFFFFF; border-radius: 5px;  font-family: Arial; text-shadow:0px 1px 1px #FFFFFF;  color: #000000; border-width:1px; font-weight:bold; ; padding: 10px 15px 10px 15px;  text-decoration: none; min-height: 40px;  text-align: center;">Chat</button></div><div id="lo_poweredBy" style="text-align:right; margin-bottom:10px;  font-size:10px; width:100%; line-height:16px; color: #CACACA;">Powered by <img src="https://d10lpsik1i8c69.cloudfront.net/graphics/logo-dark.png" align="absmiddle" title="Lucky Orange Chat Logo" alt="Lucky Orange Chat Logo" onclick="LO.click_brand(event, 'chat');" style="cursor: pointer; height: 12px; width:auto; margin-right:10px; display: inline-block;" border="0"></div></div></body></html>
